@@ -22,7 +22,7 @@ This repository implements a maximal clique enumeration algorithm in C++, optimi
 
 ## Build Instructions
 
--git clone https://github.com/ShiZ7/maximal-clique-enumeration.git
+-git clone https://shiz7.github.io/Group-19_DAA-assignment-1/
 
 -cd maximal-clique-enumeration
 
