@@ -16,13 +16,16 @@ This repository implements a maximal clique enumeration algorithm in C++, optimi
 ## Prerequisites
 
 -C++17 or later
+
 -g++ (GNU Compiler Collection)
 
 
 ## Build Instructions
 
 -git clone https://github.com/ShiZ7/maximal-clique-enumeration.git
+
 -cd maximal-clique-enumeration
+
 -g++ -std=c++17 -O2 -o maximal_clique demo4.cpp
 
 
