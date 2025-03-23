@@ -42,6 +42,7 @@ Comment lines start with #.
 
 
  Nodes: 100 Edges: 500
+ 
 Each subsequent line represents an edge:
 
 Edge list:
