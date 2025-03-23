@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximal Clique Enumeration</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        canvas {
+            max-width: 100%;
+            margin: 20px auto;
+        }
+        .output-section {
+            padding: 15px;
+            background-color: #e9f7ff;
+            border-left: 5px solid #2196f3;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .runtime-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .runtime-table th, .runtime-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .runtime-table th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Maximal Clique Enumeration</h1>
+
+    <h2>📊 Output Summary</h2>
+    <div class="output-section" id="output">
+        <p><strong>Total Maximal Cliques:</strong> 452</p>
+        <p><strong>Largest Clique Size:</strong> 6</p>
+        <p><strong>Execution Time:</strong> 1.27 seconds</p>
+    </div>
+
+    <h2>⏱️ Runtime Comparison</h2>
+    <table class="runtime-table">
+        <thead>
+            <tr>
+                <th>Algorithm</th>
+                <th>Dataset</th>
+                <th>Runtime (s)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Bron-Kerbosch (Degeneracy)</td>
+                <td>as-skitter</td>
+                <td>1.27</td>
+            </tr>
+            <tr>
+                <td>Bron-Kerbosch (Pivoting)</td>
+                <td>as-skitter</td>
+                <td>1.85</td>
+            </tr>
+            <tr>
+                <td>Basic Bron-Kerbosch</td>
+                <td>as-skitter</td>
+                <td>2.43</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>📈 Clique Size Distribution</h2>
+    <canvas id="cliqueChart"></canvas>
+
+</div>
+
+<script>
+// Histogram Data (Clique Sizes)
+const labels = ["2", "3", "4", "5", "6"];
+const data = [78, 150, 90, 90, 44];
+
+// Create Chart
+const ctx = document.getElementById('cliqueChart').getContext('2d');
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Number of Cliques',
+            data: data,
+            backgroundColor: [
+                '#4CAF50', '#FF9800', '#2196F3', '#9C27B0', '#FF5722'
+            ],
+            borderColor: [
+                '#388E3C', '#F57C00', '#1976D2', '#7B1FA2', '#E64A19'
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Number of Cliques',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    }
+                }
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Clique Size',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    }
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return ` ${context.raw} cliques`;
+                    }
+                }
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>
