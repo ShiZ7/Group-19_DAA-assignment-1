@@ -1,40 +1,32 @@
 There are three algorithms under this project.
 
-##    1.)Maximal Clique Enumeration
+#    1.)Maximal Clique Enumeration
 
 This repository implements a maximal clique enumeration algorithm in C++, optimized for both sparse and dense graphs. It leverages pivoting strategies for efficient performance, tracking runtime, clique counts, and size distribution.
 
-🚀 Features
-Efficient maximal clique enumeration using pivoting.
+ ## Features
+-Efficient maximal clique enumeration using pivoting.
+-Handles large graph datasets with quick lookups.
+-Outputs clique statistics and distribution.
+-Built-in timing for performance evaluation.
 
-Handles large graph datasets with quick lookups.
+## Prerequisites
 
-Outputs clique statistics and distribution.
-
-Built-in timing for performance evaluation.
-
-📥 Prerequisites
-Ensure you have the following installed:
-
-C++17 or later
-
-g++ (GNU Compiler Collection)
-
-Make (optional for automation)
-
-⚙️ Build Instructions
-
-git clone https://github.com/ShiZ7/maximal-clique-enumeration.git
-
-cd maximal-clique-enumeration
-
-g++ -std=c++17 -O2 -o maximal_clique demo4.cpp
+-C++17 or later
+-g++ (GNU Compiler Collection)
 
 
--O2: Optimization flag for better performance.
+## Build Instructions
+
+-git clone https://github.com/ShiZ7/maximal-clique-enumeration.git
+-cd maximal-clique-enumeration
+-g++ -std=c++17 -O2 -o maximal_clique demo4.cpp
+
+
+# Optimization flag for better performance.
 
 ▶️ Run the Program
-./maximal_clique <graph_file>
+-./maximal_clique <graph_file>
 
 
 📄 Input File Format
@@ -53,7 +45,7 @@ Edit
 2 3
 3 4
 
-🏃 Sample Output
+# Sample Output
 
 Elapsed time: 0.85 seconds
 Total Cliques = 342
@@ -66,47 +58,37 @@ Size 4: 90
 Size 5: 24
 
 
-Run with Makefile:
+## Run with Makefile:
 
 make
 make run
 
-📊 Performance Metrics
+## Performance Metrics
 
 The program tracks:
-
-Total maximal cliques found
-
-Maximum clique size
-
-Runtime in seconds
-
-Clique size distribution
+-Total maximal cliques found
+-Maximum clique size
+-Runtime in seconds
+-Clique size distribution
 
 
+# 2.)Bron-Kerbosch Clique Enumeration
 
-## 2.)Bron-Kerbosch Clique Enumeration
 
+## Features
+-Maximal clique enumeration with degeneracy ordering.
+-CSV output for clique size distribution.
+-Tracks execution time and largest clique size.
 
-🚀 Features
-
-Maximal clique enumeration with degeneracy ordering.
-
-CSV output for clique size distribution.
-
-Tracks execution time and largest clique size.
-
-⚙️ Build & Run 
+## Build & Run 
 
 Step 1: Compile the code
-
-g++ -std=c++17 -O2 -o bronkerbosch bronkerbosch.cpp
+- g++ -std=c++17 -O2 -o bronkerbosch bronkerbosch.cpp
 
 Step 2: Execute the program
+- ./bronkerbosch
 
-./bronkerbosch
-
-📄 Input Format
+## Input Format
 
 Edge list in u v format.
 
@@ -114,7 +96,7 @@ Total Maximal Cliques: 452
 Largest Maximal Clique Size: 6
 Execution Time: 1.27 seconds
 
-📊 Output
+## Output
 grok-as-skitter.csv contains clique size distribution.
 
 ## 📄 Dataset Preparation
