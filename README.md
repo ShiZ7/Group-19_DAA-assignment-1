@@ -6,8 +6,11 @@ This repository implements a maximal clique enumeration algorithm in C++, optimi
 
  ## Features
 -Efficient maximal clique enumeration using pivoting.
+
 -Handles large graph datasets with quick lookups.
+
 -Outputs clique statistics and distribution.
+
 -Built-in timing for performance evaluation.
 
 ## Prerequisites
@@ -23,7 +26,7 @@ This repository implements a maximal clique enumeration algorithm in C++, optimi
 -g++ -std=c++17 -O2 -o maximal_clique demo4.cpp
 
 
-# Optimization flag for better performance.
+## Optimization flag for better performance.
 
 ▶️ Run the Program
 -./maximal_clique <graph_file>
@@ -45,7 +48,7 @@ Edit
 2 3
 3 4
 
-# Sample Output
+## Sample Output
 
 Elapsed time: 0.85 seconds
 Total Cliques = 342
@@ -67,8 +70,11 @@ make run
 
 The program tracks:
 -Total maximal cliques found
+
 -Maximum clique size
+
 -Runtime in seconds
+
 -Clique size distribution
 
 
@@ -93,7 +99,9 @@ Step 2: Execute the program
 Edge list in u v format.
 
 Total Maximal Cliques: 452
+
 Largest Maximal Clique Size: 6
+
 Execution Time: 1.27 seconds
 
 ## Output
