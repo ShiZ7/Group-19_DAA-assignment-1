@@ -82,3 +82,38 @@ Maximum clique size
 Runtime in seconds
 
 Clique size distribution
+
+
+
+Bron-Kerbosch Clique Enumeration
+
+
+🚀 Features
+
+Maximal clique enumeration with degeneracy ordering.
+
+CSV output for clique size distribution.
+
+Tracks execution time and largest clique size.
+
+⚙️ Build & Run 
+
+Step 1: Compile the code
+
+g++ -std=c++17 -O2 -o bronkerbosch bronkerbosch.cpp
+
+Step 2: Execute the program
+
+./bronkerbosch
+
+📄 Input Format
+
+Edge list in u v format.
+
+Total Maximal Cliques: 452
+Largest Maximal Clique Size: 6
+Execution Time: 1.27 seconds
+
+📊 Output
+grok-as-skitter.csv contains clique size distribution.
+
