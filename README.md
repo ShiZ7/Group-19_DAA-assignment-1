@@ -113,6 +113,78 @@ grok-as-skitter.csv contains clique size distribution.
 ## 📄 Dataset Preparation
 You can read the detailed dataset preparation process [here](dataset_preparation.txt).
 
+
+
+#  Question3
+
+## Project Overview
+This project focuses on implementing and experimenting with maximal clique enumeration algorithms in C++. The objective is to identify all maximal cliques in a given graph dataset and analyze the performance in terms of execution time and clique size distribution.
+
+## File Description
+- **demo2.cpp**: The main C++ source file containing the implementation of the maximal clique enumeration algorithm.
+
+## Compilation and Execution
+
+### Prerequisites
+- C++ Compiler (e.g., g++)
+- Standard Template Library (STL)
+
+### Compilation
+To compile the program, use the following command:
+```bash
+g++ -std=c++17 -O2 -o clique_enum demo2.cpp
+```
+
+### Execution
+To run the program, provide a graph input file as an argument:
+```bash
+./clique_enum <graph_file>
+```
+Example:
+```bash
+./clique_enum sample_graph.txt
+```
+
+## Input File Format
+- The input file should contain edges of the graph in the format:
+```
+u v
+```
+Where `u` and `v` represent connected vertices. Commented lines starting with `#` are ignored.
+
+## Output Description
+- **Total Cliques**: The number of maximal cliques found.
+- **Max Clique Size**: The size of the largest clique identified.
+- **Clique Size Distribution**: The number of cliques of each size.
+- **Elapsed Time**: The time taken to complete the enumeration.
+
+## Performance Analysis
+The program measures the performance based on:
+- Execution time using `std::chrono`.
+- Distribution of clique sizes.
+
+## Graph Datasets
+The experiment is designed to run on multiple graph datasets with varying densities and sizes to assess the scalability and efficiency of the implementation.
+
+## Results and Discussion
+This section will include:
+- Analysis of execution time across different datasets.
+- Insights on how clique sizes distribute in sparse vs. dense graphs.
+
+## Conclusion
+The project demonstrates how maximal clique enumeration behaves under different graph structures, offering insights into its computational complexity and performance bottlenecks.
+
+## References
+- Research papers on maximal clique enumeration.
+- Documentation on C++ standard libraries.
+
+## Acknowledgments
+Special thanks to the contributors of open-source graph datasets used for testing.
+
+
+
+
+
 ## Group Members:
 (Group 19)
 
