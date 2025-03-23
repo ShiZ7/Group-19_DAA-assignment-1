@@ -24,7 +24,7 @@ Make (optional for automation)
 
 ⚙️ Build Instructions
 
-git clone https://github.com/yourusername/maximal-clique-enumeration.git
+git clone https://github.com/ShiZ7/maximal-clique-enumeration.git
 
 cd maximal-clique-enumeration
 
