@@ -198,7 +198,7 @@ T.Sai Sathwik
 2020B4A71567H (Q1,Q3)
 
 G Sri Vishwahitha	
-2022A7PS2014H (Q2)
+2022A7PS0041H (Q2)
 	
 Snigdha Kaipa	(Generating Histograms)
-2022A7PS0041H
+2022A7PS2014H
