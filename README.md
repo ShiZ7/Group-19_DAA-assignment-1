@@ -1,4 +1,5 @@
 Maximal Clique Enumeration
+
 This repository implements a maximal clique enumeration algorithm in C++, optimized for both sparse and dense graphs. It leverages pivoting strategies for efficient performance, tracking runtime, clique counts, and size distribution.
 
 🚀 Features
