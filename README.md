@@ -25,7 +25,9 @@ Make (optional for automation)
 ⚙️ Build Instructions
 
 git clone https://github.com/yourusername/maximal-clique-enumeration.git
+
 cd maximal-clique-enumeration
+
 g++ -std=c++17 -O2 -o maximal_clique demo4.cpp
 
 
