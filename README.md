@@ -121,9 +121,7 @@ grok-as-skitter.csv contains clique size distribution.
 You can read the detailed dataset preparation process [here](dataset_preparation.txt).
 
 ## Group Members:
-Names
-
-Group 19
+(Group 19)
 
 Shivansh Shanker Gupta	
 2022A7PS0047H (Report , Webpage & Q3)
