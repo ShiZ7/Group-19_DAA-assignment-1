@@ -85,7 +85,7 @@ Clique size distribution
 
 
 
-##Bron-Kerbosch Clique Enumeration
+## 2.)Bron-Kerbosch Clique Enumeration
 
 
 🚀 Features
