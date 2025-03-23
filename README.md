@@ -117,3 +117,6 @@ Execution Time: 1.27 seconds
 📊 Output
 grok-as-skitter.csv contains clique size distribution.
 
+## 📄 Dataset Preparation
+You can read the detailed dataset preparation process [here](dataset_preparation.txt).
+
