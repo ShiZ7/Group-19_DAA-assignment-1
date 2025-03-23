@@ -1,0 +1,59 @@
+
+Dataset Preparation
+
+In this project, we worked with three well-known real-world graph datasets to test how well three different maximal clique enumeration algorithms perform:
+1. Chiba-Nishizeki's Arboricity-Based Algorithm
+2. Tomita's Branch-and-Bound Algorithm
+3. Bron-Kerbosch Algorithm with Pivoting
+
+1. Overview of Datasets
+
+Dataset            | Nodes    | Edges       | Description
+--------------------|---------|------------|------------------------------------------------
+as-skitter.txt      | ~1.7M   | ~11M        | Internet topology graph.
+wiki-Vote.txt       | Varies  | Varies      | Wikipedia user voting network.
+Email-Enron.txt     | 36,692  | 367,662     | Enron email communication network.
+
+2. How We Got the Data
+- Sources:
+  - The as-skitter and wiki-Vote datasets came from the SNAP Repository.
+  - The Email-Enron dataset was downloaded from Kaggle.
+- File Format:
+  - The datasets are in an edge list format where each line shows a connection between two nodes like this:
+    u v
+
+3. How We Processed the Data
+
+Before running the algorithms, we had to clean and prepare the datasets:
+
+- Decompression: The .gz files for as-skitter and wiki-Vote were unzipped.
+- Cleaning: We removed duplicate edges and self-loops.
+- Zero-Based Indexing: We changed the node IDs to start from zero so that it’s easier to work with.
+
+Algorithm-Specific Changes:
+
+- Chiba-Nishizeki's Arboricity-Based Algorithm:
+  - We organized the vertices using arboricity decomposition to make subgraph listing faster.
+  - The adjacency list was optimized to handle sparse graphs better.
+
+- Tomita's Branch-and-Bound Algorithm:
+  - We sorted the nodes by degeneracy order.
+  - Nodes with more connections were processed first to reduce backtracking.
+
+- Bron-Kerbosch Algorithm with Pivoting:
+  - We used pivoting to keep the recursion depth smaller.
+  - Degeneracy ordering also helped improve performance.
+
+4. Tools and Technologies
+- C++ was the main programming language we used to process the graphs and run the algorithms.
+- We used Chart.js and Python (Pandas) to create histograms and compare runtimes.
+
+5. Challenges We Faced
+- Big File Sizes:
+  - The as-skitter dataset is really big (~11M edges), so we had to carefully manage memory usage.
+  - We didn’t use parallel processing to keep the runtime comparisons fair.
+- Disconnected Nodes:
+  - We kept isolated nodes in the dataset to count single-node cliques.
+
+6. Final Graph Format
+In the end, we stored all the graphs as adjacency lists using unordered_map<int, unordered_set<int>> to make neighborhood lookups faster during the maximal clique enumeration process.
